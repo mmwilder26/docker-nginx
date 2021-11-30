@@ -60,7 +60,7 @@ jobs:
         run: curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
       - name: Run Grype
         run: grype mwilder26/rkvst-sbom:latest -o cyclonedx > nginx-rkvst_latest_vuln_report.cyclonedx
-      - uses: mmwilder26/rkvst-sbom@v0.a.0
+      - uses: mmwilder26/rkvst-sbom@v0.a.3
         env:
           CLIENT_ID: ${{ secrets.CLIENT_ID }}
           CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
